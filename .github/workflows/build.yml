@@ -1,5 +1,10 @@
 name: CI
-on: [push, pull_request]
+on:
+  push:
+    branches-ignore:
+      - trunk
+      - svn2git-cache
+  pull_request:
 jobs:
   build:
     strategy:
